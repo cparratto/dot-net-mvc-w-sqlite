@@ -1,0 +1,26 @@
+{
+  "container_definitions": [
+    {
+      "name": "app",
+      "image": "",
+      "links": [
+        "db"
+      ],
+      "run_command": "dotnet run",
+      "port_mappings": [
+        {
+          "protocol": "tcp",
+          "container_port": 5000,
+          "host_port": 0
+        }
+      ],
+      "environment": [
+        {
+          "name": "NODE_ENV",
+          "value": "production"
+        }
+      ]
+    }
+  ],
+  "family": "cparrattodot-net-mvc-w-sqlite"
+}

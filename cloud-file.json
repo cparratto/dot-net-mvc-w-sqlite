@@ -1,0 +1,33 @@
+{
+  "services": [
+    {
+      "name": "app",
+      "image": "",
+      "target_num_containers": 1,
+      "sequential_deployment": true,
+      "autorestart": "ALWAYS",
+      "autoredeploy": true,
+      "linked_to_service": [
+        {
+          "name": "db",
+          "to_service": "db"
+        }
+      ],
+      "container_ports": [
+        {
+          "protocol": "tcp",
+          "inner_port": 5000,
+          "published": true,
+          "outer_port": 4947
+        }
+      ],
+      "container_envvars": [
+        {
+          "key": "NODE_ENV",
+          "value": "production"
+        }
+      ]
+    }
+  ],
+  "name": "cparrattodot-net-mvc-w-sqlite"
+}
