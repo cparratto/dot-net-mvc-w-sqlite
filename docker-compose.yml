@@ -8,8 +8,6 @@ services:
   app:
     extends:
       service: common
-    links:
-    - db
     ports:
     - 5000:5000
     command: dotnet run
