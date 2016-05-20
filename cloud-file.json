@@ -7,18 +7,12 @@
       "sequential_deployment": true,
       "autorestart": "ALWAYS",
       "autoredeploy": true,
-      "linked_to_service": [
-        {
-          "name": "db",
-          "to_service": "db"
-        }
-      ],
       "container_ports": [
         {
           "protocol": "tcp",
           "inner_port": 5000,
           "published": true,
-          "outer_port": 4947
+          "outer_port": 5860
         }
       ],
       "container_envvars": [

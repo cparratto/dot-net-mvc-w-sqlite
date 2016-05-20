@@ -3,9 +3,6 @@
     {
       "name": "app",
       "image": "",
-      "links": [
-        "db"
-      ],
       "run_command": "dotnet run",
       "port_mappings": [
         {
